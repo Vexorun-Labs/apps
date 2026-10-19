@@ -1,1 +1,1033 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — SanoTrack</title>
+<meta name="description" content="How SanoTrack keeps your health data on your device, and the limited information involved in purchases, reminders, and support.">
+<meta name="theme-color" content="#0A0B0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0A0B0D;
+    --bg-2: #0D0F13;
+    --surface: #111318;
+    --raised: #171A21;
+    --line: #262B34;
+    --line-strong: #313846;
+    --text: #ECEEF2;
+    --text-2: #A7AFBC;
+    --text-3: #7C8594;
+    --accent: #38BDF8;
+    --accent-2: #3B82F6;
+    --accent-deep: #1D4ED8;
+    --accent-wash: rgba(56, 189, 248, 0.10);
+    --ok: #4ADE80;
+    --warn: #FBBF24;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max: 1120px;
+    --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 64px rgba(0, 0, 0, 0.42);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --bg: #F6F8FB;
+      --bg-2: #EEF2F8;
+      --surface: #FFFFFF;
+      --raised: #FFFFFF;
+      --line: #DFE5EE;
+      --line-strong: #C9D3E0;
+      --text: #0C1118;
+      --text-2: #445064;
+      --text-3: #626D7F;
+      --accent: #0369A1;
+      --accent-2: #2563EB;
+      --accent-deep: #1D4ED8;
+      --accent-wash: rgba(3, 105, 161, 0.07);
+      --ok: #15803D;
+      --warn: #B45309;
+      --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 24px 60px rgba(15, 23, 42, 0.06);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1100px 600px at 85% -10%, rgba(59, 130, 246, 0.16), transparent 60%),
+      radial-gradient(800px 420px at 0% 0%, rgba(56, 189, 248, 0.06), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-color-scheme: light) {
+    body {
+      background:
+        radial-gradient(1100px 600px at 85% -10%, rgba(37, 99, 235, 0.09), transparent 60%),
+        radial-gradient(800px 420px at 0% 0%, rgba(56, 189, 248, 0.05), transparent 55%),
+        var(--bg);
+    }
+  }
+
+  ::selection { background: rgba(56, 189, 248, 0.26); }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover { color: var(--text); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip {
+    position: absolute;
+    left: 16px;
+    top: -80px;
+    z-index: 50;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .skip:focus { top: 12px; }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(10, 11, 13, 0.84);
+    border-bottom: 1px solid var(--line);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .site-header { background: rgba(246, 248, 251, 0.86); }
+  }
+
+  .header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--text);
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    flex: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent-deep));
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.30);
+  }
+
+  .brand-mark svg {
+    width: 23px;
+    height: 23px;
+    display: block;
+  }
+
+  .brand-name {
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+  }
+
+  .header-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .header-nav a {
+    padding: 7px 12px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--text-2);
+    font-size: 13.5px;
+    font-weight: 550;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .header-nav a:hover {
+    color: var(--text);
+    background: var(--accent-wash);
+  }
+
+  .header-nav a[aria-current="page"] {
+    color: var(--text);
+    background: var(--accent-wash);
+    border-color: rgba(56, 189, 248, 0.28);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .header-nav a[aria-current="page"] { border-color: rgba(3, 105, 161, 0.24); }
+  }
+
+  .hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 76px 24px 48px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+    gap: 64px;
+    align-items: center;
+  }
+
+  .kicker {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    max-width: 18ch;
+    font-size: clamp(38px, 5.2vw, 58px);
+    line-height: 1.04;
+    font-weight: 760;
+    letter-spacing: -0.035em;
+  }
+
+  .lede {
+    margin: 0;
+    max-width: 58ch;
+    color: var(--text-2);
+    font-size: 17.5px;
+    line-height: 1.6;
+  }
+
+  .hero-meta {
+    margin: 28px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    color: var(--text-3);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .hero-meta span + span {
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid var(--line-strong);
+  }
+
+  .device-card {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background:
+      linear-gradient(180deg, rgba(59, 130, 246, 0.13), rgba(59, 130, 246, 0) 48%),
+      var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .device-card {
+      background:
+        linear-gradient(180deg, rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0) 48%),
+        var(--surface);
+    }
+  }
+
+  .device-card::before {
+    content: "";
+    position: absolute;
+    right: -70px;
+    top: -100px;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 68%);
+    pointer-events: none;
+  }
+
+  .device-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--ok);
+    box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.14);
+  }
+
+  .device-title {
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+
+  .device-sub {
+    margin-left: auto;
+    color: var(--text-3);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .device-rows {
+    margin: 6px 0 0;
+    display: grid;
+  }
+
+  .device-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13.5px;
+  }
+
+  .device-row:last-child { border-bottom: 0; }
+
+  .device-row dt { color: var(--text-3); }
+
+  .device-row dd {
+    margin: 0;
+    color: var(--text);
+    font-weight: 550;
+    text-align: right;
+  }
+
+  .device-foot {
+    margin: 12px 0 0;
+    color: var(--text-3);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .doc {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 44px 24px 100px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 208px minmax(0, 752px);
+    gap: 64px;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .toc {
+    position: sticky;
+    top: 92px;
+  }
+
+  .toc-title {
+    margin: 0 0 12px;
+    color: var(--text-3);
+    font-size: 12.5px;
+    font-weight: 650;
+  }
+
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1px;
+  }
+
+  .toc a {
+    display: flex;
+    gap: 9px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: var(--text-2);
+    font-size: 13.5px;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.15s ease, background 0.15s ease;
+  }
+
+  .toc a:hover {
+    color: var(--text);
+    background: var(--accent-wash);
+  }
+
+  .toc .n {
+    min-width: 15px;
+    padding-top: 1px;
+    color: var(--text-3);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  article { min-width: 0; }
+
+  .summary {
+    margin: 0 0 42px;
+    padding: 20px 24px;
+    border: 1px solid rgba(56, 189, 248, 0.26);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+    background: var(--accent-wash);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .summary {
+      border-color: #BFDBFE;
+      border-left-color: var(--accent);
+    }
+  }
+
+  .summary h2 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 650;
+    letter-spacing: 0;
+  }
+
+  .summary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+
+  .summary li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-2);
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .summary li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .section {
+    margin: 0 0 40px;
+    scroll-margin-top: 92px;
+  }
+
+  .section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 660;
+    letter-spacing: -0.022em;
+  }
+
+  .sec-num {
+    flex: none;
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  .section h3 {
+    margin: 26px 0 7px;
+    font-size: 15.5px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+
+  .section p {
+    margin: 0 0 14px;
+    color: var(--text-2);
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  .plain {
+    margin: 0 0 16px;
+    padding-left: 20px;
+    color: var(--text-2);
+  }
+
+  .plain li { margin-bottom: 8px; }
+  .plain li:last-child { margin-bottom: 0; }
+  .plain li::marker { color: var(--text-3); }
+
+  .data-list {
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .data-list li {
+    display: grid;
+    grid-template-columns: 176px minmax(0, 1fr);
+    gap: 20px;
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .data-list b {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .callout {
+    margin: 0 0 22px;
+    padding: 16px 20px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    background: var(--accent-wash);
+  }
+
+  .callout p {
+    margin: 0;
+    color: var(--text-2);
+    font-size: 14.5px;
+  }
+
+  .callout p + p { margin-top: 10px; }
+
+  .callout strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 30px 24px 38px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 32px;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-2);
+    font-size: 13px;
+  }
+
+  .footer-brand .brand-mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+  }
+
+  .footer-brand .brand-mark svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .footer-links {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+  }
+
+  .footer-links a {
+    color: var(--text-2);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-note {
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    color: var(--text-3);
+    font-size: 12px;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding-top: 54px;
+    }
+
+    .device-card { max-width: 480px; }
+
+    .doc {
+      grid-template-columns: 1fr;
+      gap: 34px;
+      padding-top: 34px;
+    }
+
+    .toc {
+      position: static;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .toc ol {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px 12px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .header-inner { padding: 11px 18px; }
+    .header-nav a { padding: 7px 10px; }
+
+    .hero { padding: 42px 18px 34px; }
+
+    h1 { max-width: 16ch; }
+
+    .lede { font-size: 16px; }
+
+    .hero-meta {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hero-meta span + span {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .doc { padding: 28px 18px 68px; }
+
+    .toc ol { grid-template-columns: 1fr; }
+
+    .summary { padding: 18px 18px; }
+
+    .section h2 { font-size: 21px; }
+
+    .data-list li {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .footer-inner { padding: 26px 18px 32px; }
+
+    .footer-links {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .footer-note { flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  @media print {
+    :root {
+      --bg: #FFFFFF;
+      --bg-2: #FFFFFF;
+      --surface: #FFFFFF;
+      --line: #D7DCE4;
+      --line-strong: #BBC3CE;
+      --text: #111418;
+      --text-2: #30363F;
+      --text-3: #5A626D;
+      --accent: #1D4ED8;
+      --accent-wash: #F4F7FF;
+      --shadow: none;
+    }
+
+    body {
+      background: #FFFFFF;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+
+    .skip,
+    .site-header,
+    .toc,
+    .device-card,
+    .site-footer { display: none !important; }
+
+    .hero {
+      display: block;
+      max-width: none;
+      padding: 0 0 24px;
+    }
+
+    h1 {
+      max-width: none;
+      font-size: 28pt;
+      color: #111418;
+    }
+
+    .lede { color: #30363F; }
+
+    .doc {
+      display: block;
+      max-width: none;
+      padding: 0;
+      border-top: 0;
+    }
+
+    .summary,
+    .callout,
+    .section {
+      break-inside: avoid;
+    }
+
+    .section h2 { break-after: avoid; }
+
+    a {
+      color: #1D4ED8;
+      text-decoration: underline;
+    }
+
+    a[href^="http"]::after {
+      content: " (" attr(href) ")";
+      color: #5A626D;
+      font-size: 8.5pt;
+    }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 512 512" fill="none">
+          <g stroke="currentColor" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M388 220a140 140 0 1 1-42-59"/>
+            <path d="M372 183l-46-10 28-34z" fill="currentColor" stroke="none"/>
+            <line x1="256" y1="94" x2="256" y2="126"/>
+            <rect x="232" y="62" width="48" height="30" rx="10" fill="currentColor" stroke="none"/>
+            <circle cx="256" cy="268" r="22" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-name">SanoTrack</span>
+    </div>
+
+    <nav class="header-nav" aria-label="Legal pages">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <p class="kicker">Privacy policy</p>
+      <h1 id="page-title">Your health data stays yours.</h1>
+      <p class="lede">SanoTrack is a local-first health tracker. Your check-ins, symptoms, medications, and appointments live on your phone — not on a server we can read.</p>
+      <p class="hero-meta">
+        <span>Last updated 19 October 2026</span>
+        <span>SanoTrack for Android</span>
+      </p>
+    </div>
+
+    <aside class="device-card" aria-label="Data status at a glance">
+      <div class="device-head">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="device-title">On this device</span>
+        <span class="device-sub">v1.0</span>
+      </div>
+      <dl class="device-rows">
+        <div class="device-row"><dt>Health data</dt><dd>Stored locally</dd></div>
+        <div class="device-row"><dt>Account</dt><dd>Not required</dd></div>
+        <div class="device-row"><dt>Cloud sync</dt><dd>None</dd></div>
+        <div class="device-row"><dt>Ads &amp; tracking</dt><dd>None</dd></div>
+        <div class="device-row"><dt>Sold or shared</dt><dd>Never</dd></div>
+      </dl>
+      <p class="device-foot">The app has no server-side copy of your health record.</p>
+    </aside>
+  </section>
+
+  <div class="doc">
+    <aside class="toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <ol>
+        <li><a href="#who-we-are"><span class="n">1</span>Who we are</a></li>
+        <li><a href="#on-your-device"><span class="n">2</span>What stays on your device</a></li>
+        <li><a href="#never-collect"><span class="n">3</span>What we never collect</a></li>
+        <li><a href="#leaves-device"><span class="n">4</span>When data leaves the device</a></li>
+        <li><a href="#purchases"><span class="n">5</span>Purchases and subscriptions</a></li>
+        <li><a href="#permissions"><span class="n">6</span>Permissions</a></li>
+        <li><a href="#security"><span class="n">7</span>Keeping data safe</a></li>
+        <li><a href="#retention"><span class="n">8</span>Retention and deletion</a></li>
+        <li><a href="#children"><span class="n">9</span>Children's privacy</a></li>
+        <li><a href="#rights"><span class="n">10</span>Your privacy rights</a></li>
+        <li><a href="#international"><span class="n">11</span>International users</a></li>
+        <li><a href="#changes"><span class="n">12</span>Changes to this policy</a></li>
+        <li><a href="#contact"><span class="n">13</span>Contact us</a></li>
+      </ol>
+    </aside>
+
+    <article>
+      <div class="summary">
+        <h2>In short</h2>
+        <ul>
+          <li>Your check-ins, mood, symptoms, medications, appointments, and notes are stored in a private database on your phone.</li>
+          <li>There is no SanoTrack account and no cloud sync. We never receive your health data.</li>
+          <li>Data leaves the device only when you export or share it, and it goes wherever you choose.</li>
+          <li>Google Play and RevenueCat handle purchases. They see purchase details, never your health record.</li>
+        </ul>
+      </div>
+
+      <section class="section" id="who-we-are">
+        <h2><span class="sec-num">1</span>Who we are</h2>
+        <p>SanoTrack is made by <strong>Vexorun Labs</strong> (“we”, “us”, or “our”). This policy explains how the SanoTrack Android app handles information. It applies to the app and to these legal pages.</p>
+        <p>It does not cover Google Play, RevenueCat, or any other service you choose to use alongside SanoTrack. Those services have their own privacy policies. For support correspondence and the very limited account information described below, Vexorun Labs is the data controller.</p>
+      </section>
+
+      <section class="section" id="on-your-device">
+        <h2><span class="sec-num">2</span>What stays on your device</h2>
+        <p>Everything you record is stored in SanoTrack's private storage on your phone, in a local database. It is not copied to a SanoTrack server, because there is no SanoTrack server for health data.</p>
+        <ul class="data-list">
+          <li><b>Check-ins and notes</b><span>Your daily mood, the time of your check-in, and any free-text notes you add.</span></li>
+          <li><b>Mood</b><span>The mood rating you record with each check-in.</span></li>
+          <li><b>Symptoms</b><span>Symptom names, severity, dates, and notes, including custom symptoms if you use Pro.</span></li>
+          <li><b>Medications</b><span>Names, doses, schedules, and whether each dose was taken or skipped.</span></li>
+          <li><b>Appointments</b><span>Clinicians, locations, dates, visit notes, and appointment history.</span></li>
+          <li><b>Medical ID</b><span>Conditions, allergies, and an emergency contact, if you choose to add them.</span></li>
+          <li><b>Settings and reminders</b><span>Display preferences, reminder times, app-lock settings, and onboarding state.</span></li>
+        </ul>
+        <p>Many of these fields are free text. They can contain any sensitive detail you type, so treat your phone and any export like you would a paper health record.</p>
+      </section>
+
+      <section class="section" id="never-collect">
+        <h2><span class="sec-num">3</span>What we never collect</h2>
+        <p>SanoTrack does not collect or transmit your health data. Specifically, the current version of the app does not:</p>
+        <ul class="plain">
+          <li>create an account or profile, or ask for your name, email address, or phone number;</li>
+          <li>sync your data to a cloud service or keep a server-side copy;</li>
+          <li>include advertising SDKs, advertising IDs, or cross-app tracking;</li>
+          <li>access your location, contacts, camera, microphone, or body sensors;</li>
+          <li>send your check-ins, symptoms, medications, appointments, Medical ID, or notes to analytics or crash-reporting services; or</li>
+          <li>sell your personal information or share it for advertising.</li>
+        </ul>
+        <p>The current version does not include third-party analytics or crash-reporting SDKs. If we add them later, we will limit them to non-health information — things like app opens, feature usage, purchase events, and error codes — and we will update this policy before those tools go live.</p>
+        <p>If you email us for support, we receive your email address and whatever you put in the message. Please do not send health details you do not want us to have.</p>
+      </section>
+
+      <section class="section" id="leaves-device">
+        <h2><span class="sec-num">4</span>When data leaves the device</h2>
+        <p>SanoTrack moves data off your device only when you ask it to. That can happen in four ways:</p>
+
+        <h3>Backups and spreadsheets</h3>
+        <p>With Pro, you can export a JSON backup or a CSV file, and import a JSON backup. SanoTrack opens Android's system file picker so you choose the destination. There is no OAuth and no Drive API connection. We do not receive the file or gain access to your Drive.</p>
+
+        <h3>Doctor report and Medical ID</h3>
+        <p>The PDF doctor report and the Medical ID PDF are generated on your device. You decide whether to save or share them.</p>
+
+        <h3>Summary card</h3>
+        <p>The weekly summary card is a PNG image generated on your device and shared through Android's share sheet.</p>
+
+        <h3>Calendar files</h3>
+        <p>Appointments can be exported as an .ics calendar file. Like the others, it goes wherever you send it.</p>
+
+        <div class="callout">
+          <p><strong>Once a file leaves SanoTrack, it is outside our control.</strong> The app, storage provider, or person you send it to handles it under their own terms. Exports are plaintext, not password-protected, so treat them as sensitive documents.</p>
+        </div>
+
+        <p>Uninstalling SanoTrack removes its private database. Files you exported or shared before uninstalling remain wherever you saved or sent them.</p>
+      </section>
+
+      <section class="section" id="purchases">
+        <h2><span class="sec-num">5</span>Purchases and subscriptions</h2>
+        <p>Pro is sold through Google Play. Google processes the payment, and we never receive your card or bank details.</p>
+        <p>We use <strong>RevenueCat</strong> to check and restore Pro entitlements. RevenueCat receives an app-generated customer ID, purchase receipts and transaction identifiers, subscription status, and limited technical information such as platform, app version, and IP address. It does not receive your health data.</p>
+        <p>Google and RevenueCat process purchase information under their own policies, which may involve transfers to the United States and other countries. You can read them here:</p>
+        <ul class="plain">
+          <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
+          <li><a href="https://play.google.com/about/play-terms/" rel="noopener noreferrer">Google Play Terms of Service</a></li>
+          <li><a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
+        </ul>
+        <p>Restoring purchases uses the Google account you bought Pro with. We do not create a separate SanoTrack account.</p>
+      </section>
+
+      <section class="section" id="permissions">
+        <h2><span class="sec-num">6</span>Permissions</h2>
+        <p>SanoTrack asks only for permissions it needs. You can decline most of them and still use the app.</p>
+        <ul class="data-list">
+          <li><b>Notifications</b><span>Local check-in and medication reminders. No push notification server is involved.</span></li>
+          <li><b>Run after restart</b><span>Lets Android reschedule reminders after your phone reboots.</span></li>
+          <li><b>Internet</b><span>Used for Google Play billing and RevenueCat entitlement checks. It is not used to upload health data.</span></li>
+          <li><b>Files and folders</b><span>When you export or import, Android's system picker gives the app access only to the file or folder you choose. SanoTrack does not request broad storage access.</span></li>
+          <li><b>Biometrics</b><span>If you turn on the optional app lock, Android handles the fingerprint or face check. SanoTrack never receives your biometric data.</span></li>
+        </ul>
+        <p>You can change notification and app-lock permissions at any time in Android Settings or in SanoTrack.</p>
+      </section>
+
+      <section class="section" id="security">
+        <h2><span class="sec-num">7</span>Keeping data safe</h2>
+        <p>SanoTrack is built to reduce exposure:</p>
+        <ul class="plain">
+          <li>The database lives in the app's private sandbox, which other apps cannot normally read.</li>
+          <li>Android's file-based encryption protects device storage on modern phones.</li>
+          <li>Android cloud backup is turned off for SanoTrack, so the health database is not copied to Google Drive.</li>
+          <li>There is no account or cloud copy to breach.</li>
+          <li>The optional app lock requires biometric authentication to open the app.</li>
+        </ul>
+        <p>SanoTrack does not add a separate database password or its own encryption layer. On a rooted or compromised device, or on a device left unlocked, app data may be accessible. Keep Android updated, use a screen lock, and be careful where you save exports.</p>
+        <p>No storage system is completely secure. If you believe you have found a vulnerability, please email <a href="mailto:vexorunlabs@gmail.com">vexorunlabs@gmail.com</a> and give us a reasonable chance to fix it before disclosing it publicly.</p>
+      </section>
+
+      <section class="section" id="retention">
+        <h2><span class="sec-num">8</span>Retention and deletion</h2>
+        <p>Your data stays on your device until you delete it.</p>
+        <ul class="plain">
+          <li><strong>Clear all data.</strong> In SanoTrack, go to Settings → Clear all data. This erases the database and app settings on that device and cannot be undone.</li>
+          <li><strong>Uninstall.</strong> Removing the app deletes its private app data, subject to how Android handles uninstalls.</li>
+          <li><strong>Exported files.</strong> SanoTrack cannot delete files you saved or shared elsewhere. Delete them in the app or service where you put them.</li>
+          <li><strong>No server copy.</strong> There is no SanoTrack server copy to request deletion of. Purchase records held by Google and RevenueCat are governed by their retention policies; contact us if you need help with a request.</li>
+        </ul>
+        <p>Clearing app data does not cancel a Pro subscription. Cancel it in Google Play.</p>
+      </section>
+
+      <section class="section" id="children">
+        <h2><span class="sec-num">9</span>Children's privacy</h2>
+        <p>SanoTrack is not directed to children under 13, or under 16 in the European Economic Area and the United Kingdom. We do not knowingly collect personal information from children. Because health data is stored locally, a parent or guardian can delete it by clearing the app's data or uninstalling the app. If you believe a child's information has been handled improperly, contact us.</p>
+      </section>
+
+      <section class="section" id="rights">
+        <h2><span class="sec-num">10</span>Your privacy rights</h2>
+        <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or port your personal information, and to object to certain processing. Because we do not hold your health data on a server, you can exercise most of these rights directly:</p>
+        <ul class="plain">
+          <li><strong>Access and portability.</strong> View your data in the app, or export it. JSON and CSV export are Pro features.</li>
+          <li><strong>Correction.</strong> Edit or delete individual entries in the app.</li>
+          <li><strong>Deletion.</strong> Use Settings → Clear all data, or uninstall the app.</li>
+          <li><strong>Purchase data.</strong> Contact Google Play or RevenueCat. Email us if you need help finding the right route.</li>
+        </ul>
+        <p>We do not sell personal information, and we do not share it for cross-context behavioral advertising. We will not discriminate against you for exercising a privacy right. California residents have the same choices: there is no sale or sharing to opt out of.</p>
+        <p>If you are in the EEA or UK, you also have the right to complain to your local data protection authority.</p>
+      </section>
+
+      <section class="section" id="international">
+        <h2><span class="sec-num">11</span>International users</h2>
+        <p>Your health data stays on your device, so we do not transfer it internationally. Purchase-related information is processed by Google and RevenueCat, which operate globally and use their own safeguards for international transfers.</p>
+      </section>
+
+      <section class="section" id="changes">
+        <h2><span class="sec-num">12</span>Changes to this policy</h2>
+        <p>We may update this policy as the app changes. When we do, we will change the date at the top. For material changes, we will give notice in the app or on the Google Play listing before the change takes effect, and we will not apply a change retroactively where the law requires your consent.</p>
+        <p>If you do not agree with an update, stop using the app and delete your data. Continuing to use SanoTrack after an update means you accept the revised policy.</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2><span class="sec-num">13</span>Contact us</h2>
+        <p>Questions, requests, or concerns about privacy can go to:</p>
+        <p><strong>Vexorun Labs</strong><br><a href="mailto:vexorunlabs@gmail.com">vexorunlabs@gmail.com</a></p>
+        <p>We aim to reply within five business days. If your request concerns a purchase, including a refund or a payment record, Google Play is usually the fastest route.</p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 512 512" fill="none">
+          <g stroke="currentColor" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M388 220a140 140 0 1 1-42-59"/>
+            <path d="M372 183l-46-10 28-34z" fill="currentColor" stroke="none"/>
+            <line x1="256" y1="94" x2="256" y2="126"/>
+            <rect x="232" y="62" width="48" height="30" rx="10" fill="currentColor" stroke="none"/>
+            <circle cx="256" cy="268" r="22" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>
+      </span>
+      <span>SanoTrack by Vexorun Labs</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:vexorunlabs@gmail.com">Contact</a>
+    </nav>
+
+    <div class="footer-note">
+      <span>© 2026 Vexorun Labs. All rights reserved.</span>
+      <span>Made for Android. Stored on your device.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of use — SanoTrack</title>
-<meta name="description" content="The agreement for using SanoTrack, including the free tier, Pro subscriptions, medical disclaimers, and your responsibilities.">
+<meta name="description" content="The agreement for using SanoTrack, including the free tier, Pro subscriptions, anonymous diagnostics, medical disclaimers, and your responsibilities.">
 <meta name="theme-color" content="#0A0B0D" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)">
 <style>
@@ -945,6 +945,7 @@
         <div class="device-row"><dt>Platform</dt><dd>Android</dd></div>
         <div class="device-row"><dt>Free tier</dt><dd>60 check-ins / month</dd></div>
         <div class="device-row"><dt>Pro</dt><dd>Optional, via Google Play</dd></div>
+        <div class="device-row"><dt>Diagnostics</dt><dd>Anonymous, opt-out</dd></div>
         <div class="device-row"><dt>Medical device</dt><dd>No</dd></div>
       </dl>
       <p class="device-foot">Prices, taxes, and renewal terms are shown in Google Play before you buy.</p>
@@ -980,7 +981,8 @@
         <h2>The essentials</h2>
         <ul>
           <li>Use SanoTrack as a personal record-keeping tool, not as medical advice or a medical device.</li>
-          <li>Your data lives on your device. Back it up before changing phones, resetting your device, or uninstalling the app.</li>
+          <li>Your health data lives on your device. Back it up before changing phones, resetting your device, or uninstalling the app.</li>
+          <li>Anonymous usage counts and crash reports go to Firebase unless you turn them off in Settings → About. They never include health data.</li>
           <li>The free tier has limits. Pro is optional, billed by Google Play, and can be cancelled there at any time.</li>
           <li>We may update the app and these terms. If you do not agree, stop using the app and uninstall it.</li>
         </ul>
@@ -995,7 +997,7 @@
 
       <section class="section" id="what-it-is">
         <h2><span class="sec-num">2</span>What SanoTrack is</h2>
-        <p>SanoTrack is a personal health record-keeping app for Android. You can log check-ins, symptoms, mood, medications, and appointments; view trends; set reminders; and create summaries to share. It stores your data locally on your device.</p>
+        <p>SanoTrack is a personal health record-keeping app for Android. You can log check-ins, symptoms, mood, medications, measurements, and appointments; view trends; set reminders; and create summaries to share. It stores your health data locally on your device. Anonymous diagnostics are described in our <a href="privacy.html">Privacy Policy</a>.</p>
         <p>We may add, change, or remove features over time. The app is licensed to you, not sold.</p>
       </section>
 
@@ -1030,6 +1032,7 @@
         <ul class="data-list">
           <li><b>Protect your device</b><span>Use a screen lock, keep Android updated, and turn on the app lock if you want an extra barrier.</span></li>
           <li><b>Back up before you switch</b><span>Android auto-backup is disabled for SanoTrack. If you change phones, reset your device, or uninstall the app, export a backup first (Pro).</span></li>
+          <li><b>Control diagnostics</b><span>Anonymous usage counts and crash reports are on by default. Turn them off in Settings → About → Share anonymous diagnostics. They never include your health record.</span></li>
           <li><b>Check your entries</b><span>The app does not verify what you enter. Reports and trends are only as good as the data behind them.</span></li>
           <li><b>Handle exports carefully</b><span>JSON, CSV, PDF, PNG, and .ics files are plaintext and can contain sensitive health information. Once shared, they are outside SanoTrack's protection.</span></li>
           <li><b>Keep another copy of critical information</b><span>Do not rely on SanoTrack as the only record of medications, allergies, or emergency contacts.</span></li>
@@ -1080,9 +1083,10 @@
 
       <section class="section" id="third-parties">
         <h2><span class="sec-num">9</span>Third-party services</h2>
-        <p>SanoTrack uses Google Play Billing and RevenueCat. Your use of those services is governed by their own terms and privacy policies. We are not responsible for their services, availability, or how they handle information.</p>
+        <p>SanoTrack uses Google Play Billing, RevenueCat, and Google Firebase (Analytics and Crashlytics). Your use of those services is governed by their own terms and privacy policies. We are not responsible for their services, availability, or how they handle information.</p>
+        <p>Firebase receives anonymous usage event names and technical app or crash information, never your health record. Diagnostics are on by default; you can turn them off in Settings → About → Share anonymous diagnostics. See our <a href="privacy.html">Privacy Policy</a> and Google's <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase privacy information</a> for details.</p>
         <p>Links to third-party pages are provided for convenience. We do not control their content.</p>
-        <p>Android, Google Play, and the Google logo are trademarks of Google LLC. SanoTrack is not endorsed by or affiliated with Google.</p>
+        <p>Android, Google Play, Google Analytics, Firebase, Crashlytics, and the Google logo are trademarks of Google LLC. SanoTrack is not endorsed by or affiliated with Google.</p>
       </section>
 
       <section class="section" id="availability">
@@ -1169,7 +1173,7 @@
 
     <div class="footer-note">
       <span>© 2026 Vexorun Labs. All rights reserved.</span>
-      <span>Made for Android. Stored on your device.</span>
+      <span>Made for Android. Your health record stays on your device.</span>
     </div>
   </div>
 </footer>

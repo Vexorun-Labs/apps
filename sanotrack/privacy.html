@@ -796,7 +796,7 @@
       <h1 id="page-title">Your health data stays yours.</h1>
       <p class="lede">SanoTrack is a local-first health tracker. Your health record lives on your phone, not on a server. Anonymous diagnostics help us fix problems, and you can turn them off.</p>
       <p class="hero-meta">
-        <span>Last updated 19 October 2026</span>
+        <span>Last updated 22 October 2026</span>
         <span>SanoTrack for Android</span>
       </p>
     </div>
@@ -898,10 +898,14 @@
         <ul class="plain">
           <li><strong>app_open</strong> — the app started.</li>
           <li><strong>onboarding_completed</strong> — you finished onboarding.</li>
-          <li><strong>check_in_completed</strong> — a check-in was saved. This does not include your mood, symptoms, notes, or any other entry.</li>
-          <li><strong>paywall_viewed</strong> — the Pro paywall was shown.</li>
-          <li><strong>purchase_success</strong> and <strong>purchase_restored</strong> — a purchase or restore completed.</li>
-          <li><strong>revenuecat_ready</strong> — the purchase service finished starting.</li>
+          <li><strong>first_check_in</strong> and <strong>check_in_completed</strong> — your first or a later check-in was saved. These do not include your mood, symptoms, notes, or any other entry.</li>
+          <li><strong>quota_warn_shown</strong> and <strong>quota_exhausted</strong> — the free monthly limit is near or has been reached.</li>
+          <li><strong>paywall_viewed</strong>, <strong>paywall_viewed_quota</strong>, <strong>paywall_viewed_trends</strong>, <strong>paywall_viewed_custom</strong>, <strong>paywall_viewed_export</strong>, and <strong>paywall_viewed_manual</strong> — the Pro paywall was shown, with the reason it opened.</li>
+          <li><strong>paywall_plan_selected</strong> — you selected a plan on the paywall.</li>
+          <li><strong>purchase_started</strong>, <strong>purchase_success</strong>, <strong>purchase_restored</strong>, and <strong>revenuecat_ready</strong> — a purchase, restore, or purchase-service start completed.</li>
+          <li><strong>export_used</strong> — you exported data. This does not include the exported content.</li>
+          <li><strong>share_app_tapped</strong> and <strong>share_summary_tapped</strong> — you opened a share sheet.</li>
+          <li><strong>review_requested</strong> — the in-app review prompt was requested.</li>
         </ul>
         <p>Firebase also collects limited technical information automatically: a random app-instance ID, app version and lifecycle or session data, device model and manufacturer, operating system and version, language, and a coarse location derived from your IP address. Google Play Billing may report standard purchase events such as product ID, product name, and price. We have disabled collection of the Android advertising ID and Android ID in the app.</p>
 
@@ -922,7 +926,7 @@
         <p>You can move health data off the device in four ways:</p>
 
         <h3>Backups and spreadsheets</h3>
-        <p>With Pro, you can export a JSON backup or a CSV file, and import a JSON backup. SanoTrack opens Android's system file picker so you choose the destination. There is no OAuth and no Drive API connection. We do not receive the file or gain access to your Drive.</p>
+        <p>JSON backup and import are free. CSV export is part of Pro. SanoTrack opens Android's system file picker so you choose the destination. There is no OAuth and no Drive API connection. We do not receive the file or gain access to your Drive.</p>
 
         <h3>Doctor report and Medical ID</h3>
         <p>The PDF doctor report and the Medical ID PDF are generated on your device. You decide whether to save or share them.</p>
@@ -1003,7 +1007,7 @@
         <h2><span class="sec-num">11</span>Your privacy rights</h2>
         <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or port your personal information, and to object to certain processing. Because we do not hold your health data on a server, you can exercise most of these rights directly:</p>
         <ul class="plain">
-          <li><strong>Access and portability.</strong> View your data in the app, or export it. JSON and CSV export are Pro features.</li>
+          <li><strong>Access and portability.</strong> View your data in the app, or export it. JSON backup and import are free; CSV export is a Pro feature.</li>
           <li><strong>Correction.</strong> Edit or delete individual entries in the app.</li>
           <li><strong>Deletion.</strong> Use Settings → Clear all data, or uninstall the app.</li>
           <li><strong>Diagnostics.</strong> Turn off Share anonymous diagnostics at any time. You can also email us to ask about access to or deletion of diagnostics; because the data is tied to a random installation ID rather than your name, we may not be able to identify it.</li>

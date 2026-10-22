@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy policy — SanoTrack</title>
-<meta name="description" content="How SanoTrack keeps your health data on your device, with anonymous diagnostics you can turn off and limited purchase and support information.">
+<title>Terms of use — SanoTrack</title>
+<meta name="description" content="The agreement for using SanoTrack, including the free tier, Pro subscriptions, anonymous diagnostics, medical disclaimers, and your responsibilities.">
 <meta name="theme-color" content="#0A0B0D" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)">
 <style>
@@ -229,6 +229,8 @@
     letter-spacing: -0.035em;
   }
 
+  .hero.terms h1 { max-width: 21ch; }
+
   .lede {
     margin: 0;
     max-width: 58ch;
@@ -300,6 +302,15 @@
     border-radius: 50%;
     background: var(--ok);
     box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.14);
+  }
+
+  .device-card.terms .status-dot {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.14);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .device-card.terms .status-dot { box-shadow: 0 0 0 4px rgba(3, 105, 161, 0.12); }
   }
 
   .device-title {
@@ -555,6 +566,55 @@
     color: var(--text);
   }
 
+  .callout.warn {
+    border-left-color: var(--warn);
+    background: rgba(251, 191, 36, 0.07);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .callout.warn { background: rgba(180, 83, 9, 0.06); }
+  }
+
+  .table-wrap {
+    margin: 6px 0 18px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  th, td {
+    padding: 11px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+
+  thead th {
+    color: var(--text-3);
+    font-size: 12.5px;
+    font-weight: 650;
+    background: var(--raised);
+  }
+
+  tbody th {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  td { color: var(--text-2); }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td { border-bottom: 0; }
+
   .site-footer {
     border-top: 1px solid var(--line);
     background: var(--bg-2);
@@ -651,6 +711,7 @@
     .hero { padding: 42px 18px 34px; }
 
     h1 { max-width: 16ch; }
+    .hero.terms h1 { max-width: 18ch; }
 
     .lede { font-size: 16px; }
 
@@ -678,6 +739,76 @@
       gap: 2px;
     }
 
+    .table-wrap {
+      margin: 16px 0 20px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      overflow: visible;
+    }
+
+    table {
+      display: block;
+      min-width: 0;
+      font-size: 14px;
+    }
+
+    thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    tbody { display: block; }
+
+    tbody tr {
+      display: block;
+      margin-bottom: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    tbody tr:last-child { margin-bottom: 0; }
+
+    tbody th,
+    tbody td {
+      display: block;
+      padding: 9px 14px;
+      border-bottom: 0;
+    }
+
+    tbody th {
+      border-bottom: 1px solid var(--line);
+      background: var(--raised);
+      font-size: 14px;
+    }
+
+    tbody tr:last-child th { border-bottom: 1px solid var(--line); }
+
+    tbody td {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 10px;
+      align-items: baseline;
+      font-size: 13.5px;
+    }
+
+    tbody td + td { border-top: 1px solid var(--line); }
+
+    tbody td::before {
+      color: var(--text-3);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    tbody td:nth-of-type(1)::before { content: "Free"; }
+    tbody td:nth-of-type(2)::before { content: "Pro"; }
+
     .footer-inner { padding: 26px 18px 32px; }
 
     .footer-links {
@@ -698,6 +829,7 @@
       --bg: #FFFFFF;
       --bg-2: #FFFFFF;
       --surface: #FFFFFF;
+      --raised: #FFFFFF;
       --line: #D7DCE4;
       --line-strong: #BBC3CE;
       --text: #111418;
@@ -743,7 +875,8 @@
 
     .summary,
     .callout,
-    .section {
+    .section,
+    .table-wrap {
       break-inside: avoid;
     }
 
@@ -783,39 +916,39 @@
     </div>
 
     <nav class="header-nav" aria-label="Legal pages">
-      <a href="privacy.html" aria-current="page">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html" aria-current="page">Terms</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="page-title">
+  <section class="hero terms" aria-labelledby="page-title">
     <div>
-      <p class="kicker">Privacy policy</p>
-      <h1 id="page-title">Your health data stays yours.</h1>
-      <p class="lede">SanoTrack is a local-first health tracker. Your health record lives on your phone, not on a server. Anonymous diagnostics help us fix problems, and you can turn them off.</p>
+      <p class="kicker">Terms of use</p>
+      <h1 id="page-title">Terms of use, written to be read.</h1>
+      <p class="lede">This is the agreement between you and Vexorun Labs for using SanoTrack. It covers the free tier, Pro, and the limits of a record-keeping app.</p>
       <p class="hero-meta">
         <span>Last updated 22 October 2026</span>
-        <span>SanoTrack for Android</span>
+        <span>Version 1.0 · Android</span>
       </p>
     </div>
 
-    <aside class="device-card" aria-label="Data status at a glance">
+    <aside class="device-card terms" aria-label="Terms at a glance">
       <div class="device-head">
         <span class="status-dot" aria-hidden="true"></span>
-        <span class="device-title">Your data at a glance</span>
+        <span class="device-title">At a glance</span>
         <span class="device-sub">v1.0</span>
       </div>
       <dl class="device-rows">
-        <div class="device-row"><dt>Health data</dt><dd>Stored locally</dd></div>
-        <div class="device-row"><dt>Account</dt><dd>Not required</dd></div>
-        <div class="device-row"><dt>Cloud sync</dt><dd>None</dd></div>
+        <div class="device-row"><dt>Publisher</dt><dd>Vexorun Labs</dd></div>
+        <div class="device-row"><dt>Platform</dt><dd>Android</dd></div>
+        <div class="device-row"><dt>Free tier</dt><dd>60 check-ins / month</dd></div>
+        <div class="device-row"><dt>Pro</dt><dd>Optional, via Google Play</dd></div>
         <div class="device-row"><dt>Diagnostics</dt><dd>Anonymous, opt-out</dd></div>
-        <div class="device-row"><dt>Ads &amp; ad IDs</dt><dd>None</dd></div>
-        <div class="device-row"><dt>Health data sold</dt><dd>Never</dd></div>
+        <div class="device-row"><dt>Medical device</dt><dd>No</dd></div>
       </dl>
-      <p class="device-foot">Your health record stays on your phone. Diagnostics never include it.</p>
+      <p class="device-foot">Prices, taxes, and renewal terms are shown in Google Play before you buy.</p>
     </aside>
   </section>
 
@@ -823,216 +956,195 @@
     <aside class="toc" aria-label="On this page">
       <p class="toc-title">On this page</p>
       <ol>
-        <li><a href="#who-we-are"><span class="n">1</span>Who we are</a></li>
-        <li><a href="#on-your-device"><span class="n">2</span>What stays on your device</a></li>
-        <li><a href="#never-collect"><span class="n">3</span>What we never send</a></li>
-        <li><a href="#analytics"><span class="n">4</span>Analytics and crash reports</a></li>
-        <li><a href="#leaves-device"><span class="n">5</span>When data leaves the device</a></li>
-        <li><a href="#purchases"><span class="n">6</span>Purchases and subscriptions</a></li>
-        <li><a href="#permissions"><span class="n">7</span>Permissions</a></li>
-        <li><a href="#security"><span class="n">8</span>Keeping data safe</a></li>
-        <li><a href="#retention"><span class="n">9</span>Retention and deletion</a></li>
-        <li><a href="#children"><span class="n">10</span>Children's privacy</a></li>
-        <li><a href="#rights"><span class="n">11</span>Your privacy rights</a></li>
-        <li><a href="#international"><span class="n">12</span>International users</a></li>
-        <li><a href="#changes"><span class="n">13</span>Changes to this policy</a></li>
-        <li><a href="#contact"><span class="n">14</span>Contact us</a></li>
+        <li><a href="#acceptance"><span class="n">1</span>Accepting these terms</a></li>
+        <li><a href="#what-it-is"><span class="n">2</span>What SanoTrack is</a></li>
+        <li><a href="#medical"><span class="n">3</span>Not medical advice</a></li>
+        <li><a href="#eligibility"><span class="n">4</span>Who can use it</a></li>
+        <li><a href="#licence"><span class="n">5</span>Your licence</a></li>
+        <li><a href="#your-data"><span class="n">6</span>Your data and responsibilities</a></li>
+        <li><a href="#plans"><span class="n">7</span>Free tier and Pro</a></li>
+        <li><a href="#purchases"><span class="n">8</span>Purchases and refunds</a></li>
+        <li><a href="#third-parties"><span class="n">9</span>Third-party services</a></li>
+        <li><a href="#availability"><span class="n">10</span>Updates and availability</a></li>
+        <li><a href="#disclaimers"><span class="n">11</span>Disclaimers</a></li>
+        <li><a href="#liability"><span class="n">12</span>Limitation of liability</a></li>
+        <li><a href="#termination"><span class="n">13</span>Ending these terms</a></li>
+        <li><a href="#law"><span class="n">14</span>Governing law</a></li>
+        <li><a href="#changes"><span class="n">15</span>Changes to these terms</a></li>
+        <li><a href="#general"><span class="n">16</span>General</a></li>
+        <li><a href="#contact"><span class="n">17</span>Contact</a></li>
       </ol>
     </aside>
 
     <article>
       <div class="summary">
-        <h2>In short</h2>
+        <h2>The essentials</h2>
         <ul>
-          <li>Your check-ins, mood, symptoms, medications, measurements, appointments, and notes are stored in a private database on your phone.</li>
-          <li>There is no SanoTrack account and no cloud sync. We never receive your health data.</li>
-          <li>Your health data leaves the device only when you export or share it, and it goes wherever you choose.</li>
-          <li>Firebase Analytics and Crashlytics receive anonymous usage counts and crash reports, never your health data. You can turn them off in Settings → About.</li>
-          <li>Google Play and RevenueCat handle purchases. They see purchase details, never your health record.</li>
+          <li>Use SanoTrack as a personal record-keeping tool, not as medical advice or a medical device.</li>
+          <li>Your health data lives on your device. Back it up before changing phones, resetting your device, or uninstalling the app.</li>
+          <li>Anonymous usage counts and crash reports go to Firebase unless you turn them off in Settings → About. They never include health data.</li>
+          <li>The free tier has limits. Pro is optional, billed by Google Play, and can be cancelled there at any time.</li>
+          <li>We may update the app and these terms. If you do not agree, stop using the app and uninstall it.</li>
         </ul>
       </div>
 
-      <section class="section" id="who-we-are">
-        <h2><span class="sec-num">1</span>Who we are</h2>
-        <p>SanoTrack is made by <strong>Vexorun Labs</strong> (“we”, “us”, or “our”). This policy explains how the SanoTrack Android app handles information. It applies to the app and to these legal pages.</p>
-        <p>It does not cover Google Play, RevenueCat, Firebase, or any other service you choose to use alongside SanoTrack. Those services have their own privacy policies. For support correspondence and the limited diagnostics and purchase information described below, Vexorun Labs is the data controller.</p>
+      <section class="section" id="acceptance">
+        <h2><span class="sec-num">1</span>Accepting these terms</h2>
+        <p>By downloading, installing, or using SanoTrack, you agree to these terms and to our <a href="privacy.html">Privacy Policy</a>. If you do not agree, do not use the app.</p>
+        <p>These terms are between you and <strong>Vexorun Labs</strong> (“we”, “us”, or “our”). They are not between you and Google. Google's own terms apply to your use of Google Play and to purchases made through it.</p>
+        <p>You must be able to form a binding contract in your country to use SanoTrack.</p>
       </section>
 
-      <section class="section" id="on-your-device">
-        <h2><span class="sec-num">2</span>What stays on your device</h2>
-        <p>Everything you record is stored in SanoTrack's private storage on your phone, in a local database. It is not copied to a SanoTrack server, because there is no SanoTrack server for health data.</p>
-        <ul class="data-list">
-          <li><b>Check-ins and notes</b><span>Your daily mood, the time of your check-in, and any free-text notes you add.</span></li>
-          <li><b>Mood</b><span>The mood rating you record with each check-in.</span></li>
-          <li><b>Symptoms</b><span>Symptom names, severity, dates, and notes, including custom symptoms if you use Pro.</span></li>
-          <li><b>Measurements and custom trackers</b><span>Readings such as blood pressure or weight, and numeric trackers you create, including any target range.</span></li>
-          <li><b>Medications</b><span>Names, doses, schedules, refill counts if you add them, and whether each dose was taken or skipped.</span></li>
-          <li><b>Appointments</b><span>Clinicians, locations, dates, visit notes, and appointment history.</span></li>
-          <li><b>Medical ID</b><span>Conditions, allergies, and an emergency contact, if you choose to add them.</span></li>
-          <li><b>Settings and reminders</b><span>Display preferences, reminder times, app-lock settings, onboarding state, and your diagnostics preference.</span></li>
-        </ul>
-        <p>Many of these fields are free text. They can contain any sensitive detail you type, so treat your phone and any export like you would a paper health record.</p>
+      <section class="section" id="what-it-is">
+        <h2><span class="sec-num">2</span>What SanoTrack is</h2>
+        <p>SanoTrack is a personal health record-keeping app for Android. You can log check-ins, symptoms, mood, medications, measurements, and appointments; view trends; set reminders; and create summaries to share. It stores your health data locally on your device. Anonymous diagnostics are described in our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>We may add, change, or remove features over time. The app is licensed to you, not sold.</p>
       </section>
 
-      <section class="section" id="never-collect">
-        <h2><span class="sec-num">3</span>What we never send</h2>
-        <p>SanoTrack does not send your health record to us or to Firebase. Specifically, we do not:</p>
-        <ul class="plain">
-          <li>create an account or profile, or ask for your name, email address, or phone number;</li>
-          <li>sync your health data to a cloud service or keep a server-side copy;</li>
-          <li>include advertising SDKs, use the Android advertising ID, or track you across other apps;</li>
-          <li>access your precise location, contacts, camera, microphone, or body sensors;</li>
-          <li>send your check-ins, mood, symptoms, measurements, medications, appointments, Medical ID, notes, or other entries to analytics or crash-reporting services; or</li>
-          <li>sell your personal information or use it for advertising.</li>
-        </ul>
-        <p>Those tools do receive anonymous diagnostics, described in section 4. They receive event names and technical information, never the contents of your health record. We do not use them for profiling or advertising.</p>
-        <p>If you email us for support, we receive your email address and whatever you put in the message. Please do not send health details you do not want us to have.</p>
-      </section>
-
-      <section class="section" id="analytics">
-        <h2><span class="sec-num">4</span>Analytics and crash reports</h2>
-        <p>SanoTrack uses <strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong>, provided by Google LLC, to understand which features are used and to find and fix crashes. Both are on by default. You can turn them off at any time in <strong>Settings → About → Share anonymous diagnostics</strong>.</p>
-
-        <h3>Usage events</h3>
-        <p>For the events SanoTrack logs, Firebase Analytics receives the event name only. SanoTrack does not send event parameters, a user ID, your name or email, or any value you enter in the app. The current events are:</p>
-        <ul class="plain">
-          <li><strong>app_open</strong> — the app started.</li>
-          <li><strong>onboarding_completed</strong> — you finished onboarding.</li>
-          <li><strong>first_check_in</strong> and <strong>check_in_completed</strong> — your first or a later check-in was saved. These do not include your mood, symptoms, notes, or any other entry.</li>
-          <li><strong>quota_warn_shown</strong> and <strong>quota_exhausted</strong> — the free monthly limit is near or has been reached.</li>
-          <li><strong>paywall_viewed</strong>, <strong>paywall_viewed_quota</strong>, <strong>paywall_viewed_trends</strong>, <strong>paywall_viewed_custom</strong>, <strong>paywall_viewed_export</strong>, and <strong>paywall_viewed_manual</strong> — the Pro paywall was shown, with the reason it opened.</li>
-          <li><strong>paywall_plan_selected</strong> — you selected a plan on the paywall.</li>
-          <li><strong>purchase_started</strong>, <strong>purchase_success</strong>, <strong>purchase_restored</strong>, and <strong>revenuecat_ready</strong> — a purchase, restore, or purchase-service start completed.</li>
-          <li><strong>export_used</strong> — you exported data. This does not include the exported content.</li>
-          <li><strong>share_app_tapped</strong> and <strong>share_summary_tapped</strong> — you opened a share sheet.</li>
-          <li><strong>review_requested</strong> — the in-app review prompt was requested.</li>
-        </ul>
-        <p>Firebase also collects limited technical information automatically: a random app-instance ID, app version and lifecycle or session data, device model and manufacturer, operating system and version, language, and a coarse location derived from your IP address. Google Play Billing may report standard purchase events such as product ID, product name, and price. We have disabled collection of the Android advertising ID and Android ID in the app.</p>
-
-        <h3>Crash reports</h3>
-        <p>If SanoTrack crashes or an error occurs, Crashlytics may receive a stack trace, a technical error message and code, app version, device model, operating system, available memory and disk space, whether the device is rooted, the Firebase installation ID, and similar technical details. We do not attach your health record, set a user ID, or add custom logs or keys to these reports.</p>
-
-        <h3>How we use it</h3>
-        <p>We use diagnostics only to measure aggregate feature use, diagnose failures, and improve reliability. Firebase transmits this data over encrypted connections. We do not use it for advertising or automated decisions, and we do not sell it.</p>
-
-        <h3>Your control and retention</h3>
-        <p>Turning off <strong>Share anonymous diagnostics</strong> stops Analytics and Crashlytics collection, clears queued analytics events, and deletes unsent crash reports. Reports already sent are not recalled: Google retains Analytics event data for up to 14 months and Crashlytics crash data for 90 days. Clearing all data resets this preference to its default, which is on, so turn it off again after onboarding if you want to opt out.</p>
-        <p>Because diagnostics are tied to a random installation ID rather than your name or account, we may not be able to identify your data for an access or deletion request. You can always stop future collection with the setting above. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase's privacy and security information</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-      </section>
-
-      <section class="section" id="leaves-device">
-        <h2><span class="sec-num">5</span>When data leaves the device</h2>
-        <p>Your health data moves off your device only when you ask it to. Anonymous diagnostics are separate, automatic, and described in section 4; they never include your health record.</p>
-        <p>You can move health data off the device in four ways:</p>
-
-        <h3>Backups and spreadsheets</h3>
-        <p>JSON backup and import are free. CSV export is part of Pro. SanoTrack opens Android's system file picker so you choose the destination. There is no OAuth and no Drive API connection. We do not receive the file or gain access to your Drive.</p>
-
-        <h3>Doctor report and Medical ID</h3>
-        <p>The PDF doctor report and the Medical ID PDF are generated on your device. You decide whether to save or share them.</p>
-
-        <h3>Summary card</h3>
-        <p>The weekly summary card is a PNG image generated on your device and shared through Android's share sheet.</p>
-
-        <h3>Calendar files</h3>
-        <p>Appointments can be exported as an .ics calendar file. Like the others, it goes wherever you send it.</p>
-
-        <div class="callout">
-          <p><strong>Once a file leaves SanoTrack, it is outside our control.</strong> The app, storage provider, or person you send it to handles it under their own terms. Exports are plaintext, not password-protected, so treat them as sensitive documents.</p>
+      <section class="section" id="medical">
+        <h2><span class="sec-num">3</span>Not medical advice</h2>
+        <div class="callout warn" role="note">
+          <p><strong>SanoTrack is not a medical device and does not provide medical advice.</strong> It does not diagnose, treat, cure, or prevent any condition, and it does not replace a qualified healthcare professional.</p>
         </div>
+        <p>Trends, scores, reminders, reports, and the Medical ID are informational tools based on what you enter. They can be incomplete or wrong. Do not delay, ignore, or change professional medical advice because of something SanoTrack shows.</p>
+        <p>SanoTrack cannot monitor you in real time and does not contact anyone in an emergency. If you think you are having a medical emergency, call your local emergency number immediately.</p>
+        <p>You are responsible for checking any information you share with a clinician. A doctor report is only as accurate as the data you recorded.</p>
+      </section>
 
-        <p>Uninstalling SanoTrack removes its private database. Files you exported or shared before uninstalling remain wherever you saved or sent them, and diagnostics already sent to Firebase are not deleted by uninstalling.</p>
+      <section class="section" id="eligibility">
+        <h2><span class="sec-num">4</span>Who can use it</h2>
+        <p>You must be at least 13 years old, or at least 16 in the European Economic Area and the United Kingdom. If you are under 18, you must have permission from a parent or guardian.</p>
+        <p>You need a compatible Android device and, for purchases, a Google Play account. You are responsible for your device, your Google account, and any charges that apply to your connection.</p>
+        <p>Do not use SanoTrack if you are barred from using it under applicable law.</p>
+      </section>
+
+      <section class="section" id="licence">
+        <h2><span class="sec-num">5</span>Your licence</h2>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable, limited licence to install and use SanoTrack on Android devices you own or control, for your personal, non-commercial use.</p>
+        <p>You may not copy, sell, rent, lease, sublicense, or redistribute the app; modify it or create derivative works; reverse engineer or decompile it, except where the law expressly allows; remove proprietary notices; or use the app to break the law or interfere with another person's device or service.</p>
+        <p>Some parts of the app use open-source software. Those components are governed by their own licences, which prevail over these terms where they conflict.</p>
+        <p>We and our licensors keep all rights in the app, including the SanoTrack name, logo, design, and content. These terms do not give you ownership of any of it.</p>
+      </section>
+
+      <section class="section" id="your-data">
+        <h2><span class="sec-num">6</span>Your data and responsibilities</h2>
+        <p>Your health data stays on your device under your control. That also means you are responsible for it.</p>
+        <ul class="data-list">
+          <li><b>Protect your device</b><span>Use a screen lock, keep Android updated, and turn on the app lock if you want an extra barrier.</span></li>
+          <li><b>Back up before you switch</b><span>Android auto-backup is disabled for SanoTrack. If you change phones, reset your device, or uninstall the app, export a JSON backup first (free).</span></li>
+          <li><b>Control diagnostics</b><span>Anonymous usage counts and crash reports are on by default. Turn them off in Settings → About → Share anonymous diagnostics. They never include your health record.</span></li>
+          <li><b>Check your entries</b><span>The app does not verify what you enter. Reports and trends are only as good as the data behind them.</span></li>
+          <li><b>Handle exports carefully</b><span>JSON, CSV, PDF, PNG, and .ics files are plaintext and can contain sensitive health information. Once shared, they are outside SanoTrack's protection.</span></li>
+          <li><b>Keep another copy of critical information</b><span>Do not rely on SanoTrack as the only record of medications, allergies, or emergency contacts.</span></li>
+        </ul>
+        <p>To the extent permitted by law, we are not responsible for data lost through device failure, loss, theft, reset, uninstallation, operating-system changes, or failure to keep a backup.</p>
+      </section>
+
+      <section class="section" id="plans">
+        <h2><span class="sec-num">7</span>Free tier and Pro</h2>
+        <p>Version 1.0 offers a free tier and an optional Pro upgrade. These are the current limits:</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Free</th>
+                <th scope="col">Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Daily check-ins</th><td>60 per month</td><td>Unlimited</td></tr>
+              <tr><th scope="row">History browsing</th><td>All history</td><td>All history</td></tr>
+              <tr><th scope="row">Trend charts</th><td>Last 30 days</td><td>90 days</td></tr>
+              <tr><th scope="row">Logging medications and appointments</th><td>Included</td><td>Included</td></tr>
+              <tr><th scope="row">Per-medication reminders</th><td>Included</td><td>Included</td></tr>
+              <tr><th scope="row">Daily check-in reminder</th><td>Included</td><td>Included</td></tr>
+              <tr><th scope="row">Doctor report, Medical ID, summary card</th><td>Included</td><td>Included</td></tr>
+              <tr><th scope="row">JSON backup and restore</th><td>Included</td><td>Included</td></tr>
+              <tr><th scope="row">CSV export</th><td>—</td><td>Included</td></tr>
+              <tr><th scope="row">Custom symptoms and measurements</th><td>—</td><td>Included</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The free tier includes up to 60 check-ins in a calendar month. There is no lifetime cap. Unused check-ins do not carry over. When you reach the monthly limit, new check-ins pause until the next calendar month or you upgrade; your existing data stays readable. You can still log medications and appointments, and use the free reports.</p>
+        <p>We may change the free tier or Pro features in future versions. We will not lock away data you have already recorded, and we will describe material changes in the app or the Play listing.</p>
+        <p>Pro is an entitlement tied to your Google Play account and restored through Google Play. It is not a transferable product and does not include any medical service.</p>
       </section>
 
       <section class="section" id="purchases">
-        <h2><span class="sec-num">6</span>Purchases and subscriptions</h2>
-        <p>Pro is sold through Google Play. Google processes the payment, and we never receive your card or bank details.</p>
-        <p>We use <strong>RevenueCat</strong> to check and restore Pro entitlements. RevenueCat receives an app-generated customer ID, purchase receipts and transaction identifiers, subscription status, and limited technical information such as platform, app version, and IP address. It does not receive your health data.</p>
-        <p>Google and RevenueCat process purchase information under their own policies, which may involve transfers to the United States and other countries. You can read them here:</p>
-        <ul class="plain">
-          <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
-          <li><a href="https://play.google.com/about/play-terms/" rel="noopener noreferrer">Google Play Terms of Service</a></li>
-          <li><a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
-        </ul>
-        <p>Restoring purchases uses the Google account you bought Pro with. We do not create a separate SanoTrack account.</p>
+        <h2><span class="sec-num">8</span>Purchases and refunds</h2>
+        <p>All purchases are processed by Google Play. Prices, taxes, and available payment methods are shown before you confirm. We never receive your card or bank details.</p>
+        <h3>Subscriptions</h3>
+        <p>The monthly Pro plan renews automatically through Google Play until you cancel. Cancel in Google Play under Subscriptions. Cancelling stops future renewals, and you keep Pro until the end of the current billing period. Deleting the app or clearing its data does not cancel a subscription.</p>
+        <p>The lifetime option is a one-time purchase, not a subscription.</p>
+        <h3>Refunds and restoration</h3>
+        <p>Refunds are handled by Google Play under its refund policy. We cannot issue refunds directly. Contact Google Play support for a refund request. If a purchase is reversed or charged back, Pro access may end.</p>
+        <p>You can restore purchases from the paywall or Settings using the Google account you bought Pro with. RevenueCat helps us validate and restore entitlements. It receives purchase and technical information, never health data. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+        <p>We may change prices for future purchases. A change does not affect a subscription that is already active before the change takes effect, except as Google Play's terms allow.</p>
       </section>
 
-      <section class="section" id="permissions">
-        <h2><span class="sec-num">7</span>Permissions</h2>
-        <p>SanoTrack asks only for permissions it needs. You can decline most of them and still use the app.</p>
-        <ul class="data-list">
-          <li><b>Notifications</b><span>Local check-in and medication reminders. No push notification server is involved.</span></li>
-          <li><b>Run after restart</b><span>Lets Android reschedule reminders after your phone reboots.</span></li>
-          <li><b>Internet</b><span>Used for Google Play billing, RevenueCat entitlement checks, and Firebase diagnostics. It is not used to upload health data.</span></li>
-          <li><b>Files and folders</b><span>When you export or import, Android's system picker gives the app access only to the file or folder you choose. SanoTrack does not request broad storage access.</span></li>
-          <li><b>Biometrics</b><span>If you turn on the optional app lock, Android handles the fingerprint or face check. SanoTrack never receives your biometric data.</span></li>
-        </ul>
-        <p>You can change notification and app-lock permissions at any time in Android Settings or in SanoTrack.</p>
+      <section class="section" id="third-parties">
+        <h2><span class="sec-num">9</span>Third-party services</h2>
+        <p>SanoTrack uses Google Play Billing, RevenueCat, and Google Firebase (Analytics and Crashlytics). Your use of those services is governed by their own terms and privacy policies. We are not responsible for their services, availability, or how they handle information.</p>
+        <p>Firebase receives anonymous usage event names and technical app or crash information, never your health record. Diagnostics are on by default; you can turn them off in Settings → About → Share anonymous diagnostics. See our <a href="privacy.html">Privacy Policy</a> and Google's <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase privacy information</a> for details.</p>
+        <p>Links to third-party pages are provided for convenience. We do not control their content.</p>
+        <p>Android, Google Play, Google Analytics, Firebase, Crashlytics, and the Google logo are trademarks of Google LLC. SanoTrack is not endorsed by or affiliated with Google.</p>
       </section>
 
-      <section class="section" id="security">
-        <h2><span class="sec-num">8</span>Keeping data safe</h2>
-        <p>SanoTrack is built to reduce exposure:</p>
-        <ul class="plain">
-          <li>The database is encrypted at rest with SQLCipher, using a random 256-bit key generated on your device and kept in Android Keystore. The key is not included in exports.</li>
-          <li>The database lives in the app's private sandbox, which other apps cannot normally read.</li>
-          <li>Android's file-based encryption protects device storage on modern phones.</li>
-          <li>Android cloud backup is turned off for SanoTrack, so the health database is not copied to Google Drive.</li>
-          <li>There is no account or cloud copy of your health record.</li>
-          <li>The optional app lock requires biometric authentication to open the app.</li>
-        </ul>
-        <p>Exports are not encrypted by SanoTrack. JSON, CSV, PDF, PNG, and .ics files are plaintext and can contain sensitive health information, so treat them like a paper health record. The database key is protected by Android Keystore, but on a rooted or compromised device, or a device left unlocked, app data may still be accessible while the app is running. Keep Android updated, use a screen lock, and be careful where you save exports.</p>
-        <p>No storage system is completely secure. If you believe you have found a vulnerability, please email <a href="mailto:vexorunlabs@gmail.com">vexorunlabs@gmail.com</a> and give us a reasonable chance to fix it before disclosing it publicly.</p>
+      <section class="section" id="availability">
+        <h2><span class="sec-num">10</span>Updates and availability</h2>
+        <p>We may release updates, change features, or stop supporting a version of the app. We may also discontinue the app. Where reasonably possible, we will give notice in the app or on the Play listing.</p>
+        <p>The app works offline for its core features. We do not guarantee that it will always be available, uninterrupted, or error-free, or that reminders will always fire. Battery settings, Do Not Disturb, device restarts, and operating-system restrictions can affect notifications.</p>
+        <p>Because your data is local, you can export a JSON backup (free) or CSV file (Pro), or delete it at any time. Keep your own copy of anything you cannot afford to lose.</p>
       </section>
 
-      <section class="section" id="retention">
-        <h2><span class="sec-num">9</span>Retention and deletion</h2>
-        <p>Your health data stays on your device until you delete it. Diagnostics and purchase records are handled separately.</p>
-        <ul class="plain">
-          <li><strong>Clear all data.</strong> In SanoTrack, go to Settings → Clear all data. This erases the health database and app settings on that device, including the diagnostics preference, and returns the app to onboarding. It cannot be undone.</li>
-          <li><strong>Uninstall.</strong> Removing the app deletes its private app data, subject to how Android handles uninstalls. Diagnostics already sent to Firebase are not deleted by uninstalling.</li>
-          <li><strong>Exported files.</strong> SanoTrack cannot delete files you saved or shared elsewhere. Delete them in the app or service where you put them.</li>
-          <li><strong>Diagnostics.</strong> Firebase Analytics event data is retained for up to 14 months and Crashlytics crash data for 90 days. Turn off Share anonymous diagnostics to stop new collection and delete unsent crash reports. Email us to request deletion of data already sent; because it is tied to a random installation ID, we may not be able to identify it.</li>
-          <li><strong>No SanoTrack server copy.</strong> There is no SanoTrack server copy of your health record, so there is nothing there to delete. Purchase records held by Google and RevenueCat, and diagnostics held by Google, are governed by their retention policies; contact us if you need help with a request.</li>
-        </ul>
-        <p>Clearing app data does not cancel a Pro subscription, and it resets Share anonymous diagnostics to on. Cancel Pro in Google Play and turn diagnostics off again if you want to opt out.</p>
+      <section class="section" id="disclaimers">
+        <h2><span class="sec-num">11</span>Disclaimers</h2>
+        <p>To the maximum extent permitted by law, SanoTrack is provided “as is” and “as available”, without warranties of any kind, whether express, implied, or statutory. This includes implied warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement.</p>
+        <p>We do not warrant that the app will meet your requirements, that data will be accurate or complete, that defects will be corrected, or that the app will be free of viruses or harmful components.</p>
+        <p>Some countries do not allow the exclusion of certain warranties, so some of the above may not apply to you. Nothing in these terms excludes a warranty that cannot be excluded by law.</p>
       </section>
 
-      <section class="section" id="children">
-        <h2><span class="sec-num">10</span>Children's privacy</h2>
-        <p>SanoTrack is not directed to children under 13, or under 16 in the European Economic Area and the United Kingdom. We do not knowingly collect health information or account details from children. The diagnostics described in section 4 are limited to technical and usage information and are not used for advertising. Because health data is stored locally, a parent or guardian can delete it by clearing the app's data or uninstalling the app. If you believe a child's information has been handled improperly, contact us.</p>
+      <section class="section" id="liability">
+        <h2><span class="sec-num">12</span>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, Vexorun Labs and its suppliers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, revenue, goodwill, or opportunity, arising out of or relating to your use of, or inability to use, SanoTrack.</p>
+        <p>To the maximum extent permitted by law, our total liability for all claims relating to the app or these terms will not exceed the greater of the amount you paid for SanoTrack in the 12 months before the claim, or the minimum amount required by applicable law.</p>
+        <p>Nothing in these terms limits liability for fraud, willful misconduct, gross negligence, death or personal injury caused by negligence, or any other liability that cannot be limited or excluded by law. If you are a consumer, you keep all mandatory rights under the laws of your country.</p>
       </section>
 
-      <section class="section" id="rights">
-        <h2><span class="sec-num">11</span>Your privacy rights</h2>
-        <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or port your personal information, and to object to certain processing. Because we do not hold your health data on a server, you can exercise most of these rights directly:</p>
-        <ul class="plain">
-          <li><strong>Access and portability.</strong> View your data in the app, or export it. JSON backup and import are free; CSV export is a Pro feature.</li>
-          <li><strong>Correction.</strong> Edit or delete individual entries in the app.</li>
-          <li><strong>Deletion.</strong> Use Settings → Clear all data, or uninstall the app.</li>
-          <li><strong>Diagnostics.</strong> Turn off Share anonymous diagnostics at any time. You can also email us to ask about access to or deletion of diagnostics; because the data is tied to a random installation ID rather than your name, we may not be able to identify it.</li>
-          <li><strong>Purchase data.</strong> Contact Google Play or RevenueCat. Email us if you need help finding the right route.</li>
-        </ul>
-        <p>We do not sell personal information or use it for cross-context behavioral advertising. We will not discriminate against you for exercising a privacy right. California residents have the same choices: there is no sale or advertising use to opt out of.</p>
-        <p>If you are in the EEA or UK, you also have the right to complain to your local data protection authority.</p>
+      <section class="section" id="termination">
+        <h2><span class="sec-num">13</span>Ending these terms</h2>
+        <p>You may stop using SanoTrack at any time by uninstalling it and deleting your data.</p>
+        <p>We may suspend or end your licence if you materially breach these terms, use the app unlawfully, or attempt to harm the app or other users. Where reasonable, we will give notice and a chance to fix the issue.</p>
+        <p>If we end the licence, you can still delete your local data. The sections that by their nature should survive — including ownership, disclaimers, liability, and governing law — will continue to apply.</p>
       </section>
 
-      <section class="section" id="international">
-        <h2><span class="sec-num">12</span>International users</h2>
-        <p>Your health data stays on your device, so we do not transfer it internationally. Diagnostics and purchase-related information are processed by Google and RevenueCat, which operate globally and may process data in the United States and other countries under their own safeguards. Google is certified under the EU-U.S. Data Privacy Framework and uses standard contractual clauses where required.</p>
+      <section class="section" id="law">
+        <h2><span class="sec-num">14</span>Governing law</h2>
+        <p>These terms are governed by the laws that apply where you live, together with any mandatory consumer protections you have there. Nothing in these terms removes a protection you cannot waive.</p>
+        <p>Before filing a claim, please email us at <a href="mailto:vexorunlabs@gmail.com">vexorunlabs@gmail.com</a> and give us 30 days to try to resolve it informally.</p>
+        <p>If we cannot resolve it, you may bring a claim in the courts that have jurisdiction over you. Nothing in these terms prevents you from contacting a local consumer-protection authority or making a claim under mandatory law.</p>
       </section>
 
       <section class="section" id="changes">
-        <h2><span class="sec-num">13</span>Changes to this policy</h2>
-        <p>We may update this policy as the app changes. When we do, we will change the date at the top. For material changes, we will give notice in the app or on the Google Play listing before the change takes effect, and we will not apply a change retroactively where the law requires your consent.</p>
-        <p>If you do not agree with an update, stop using the app and delete your data. Continuing to use SanoTrack after an update means you accept the revised policy.</p>
+        <h2><span class="sec-num">15</span>Changes to these terms</h2>
+        <p>We may update these terms. When we do, we will change the date at the top and, for material changes, give notice in the app or on the Play listing before the change takes effect. If the law requires your consent, we will ask for it.</p>
+        <p>Changes apply prospectively. If you do not agree, stop using the app and uninstall it. Continuing to use SanoTrack after the effective date means you accept the updated terms.</p>
+        <p>These terms, together with the Privacy Policy, are the entire agreement between you and us about the app.</p>
+      </section>
+
+      <section class="section" id="general">
+        <h2><span class="sec-num">16</span>General</h2>
+        <p>If a provision is found unenforceable, it will be limited to the minimum extent necessary, and the remaining provisions stay in effect.</p>
+        <p>Failure to enforce a provision is not a waiver. You may not assign these terms. We may assign them as part of a merger, acquisition, or sale of assets, provided your rights are not reduced.</p>
+        <p>Nothing in these terms creates a partnership, joint venture, or employment relationship. Headings are for convenience only.</p>
       </section>
 
       <section class="section" id="contact">
-        <h2><span class="sec-num">14</span>Contact us</h2>
-        <p>Questions, requests, or concerns about privacy can go to:</p>
+        <h2><span class="sec-num">17</span>Contact</h2>
+        <p>Questions about these terms can go to:</p>
         <p><strong>Vexorun Labs</strong><br><a href="mailto:vexorunlabs@gmail.com">vexorunlabs@gmail.com</a></p>
-        <p>We aim to reply within five business days. If your request concerns a purchase, including a refund or a payment record, Google Play is usually the fastest route.</p>
+        <p>For purchase or refund help, contact Google Play support directly. We aim to reply to legal and support questions within five business days.</p>
       </section>
     </article>
   </div>
